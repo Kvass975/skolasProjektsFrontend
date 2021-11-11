@@ -1,3 +1,4 @@
+// Mainigie
 const form = document.querySelector("#input-form")
 const name = document.querySelector("#name")
 const surname = document.querySelector("#surname")
@@ -7,6 +8,7 @@ const error1 = document.querySelector(".error-msg1")
 let deleteBtn = document.querySelectorAll(".delete-btn")
 let num = 0
 
+// Form submit
 form.addEventListener("submit", async function(e){
     e.preventDefault()
     error.style.display = 'none'
@@ -22,7 +24,7 @@ form.addEventListener("submit", async function(e){
             error1.style.display = 'inline'
         }
     })
-    
+
     if(num==0){
         error1.style.display = 'none'
         error1.style.display = "none"
@@ -40,13 +42,14 @@ form.addEventListener("submit", async function(e){
         num = 0
     }
 })
-
+// Iegust datus
 const getData = async function(){
     const rawData = await fetch('https://skolasprojektsbackend.herokuapp.com/')
     const parsedData = await rawData.json()
     return parsedData
 }
 
+// Izveido tabulu
 const makeTable = async function(data){
     const dataArr = await data
     table.insertAdjacentHTML("beforeend",`
@@ -69,6 +72,8 @@ const makeTable = async function(data){
 }
 makeTable(getData())
 
+
+// Pārtaisa tabulu
 const resetFunc = async function(){
     name.value = ""
     surname.value = ""
@@ -76,6 +81,7 @@ const resetFunc = async function(){
     makeTable(getData())
 }
 
+// Izdzēš lietotaju
 const deleteFunction = async function(array){
     deleteBtn.forEach(button=>{
         button.addEventListener("click", function(){
