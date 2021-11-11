@@ -1,0 +1,94 @@
+html, body{
+  height: 100%;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+  }
+  *{
+    padding:0;
+    margin:0;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    width: 100px;
+    text-align: center; 
+    vertical-align: middle;
+  }
+  .delete{
+      width: 40%;
+  }
+  .error-msg{
+      color: red;
+      margin: 0;
+      margin-bottom: 20px;
+      display: none;
+      position: absolute;
+  }
+  .error-msg1{
+    color: red;
+    margin: 0;
+    margin-bottom: 20px;
+    display: none;
+    position: absolute;
+}
+#form-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#form-div1{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+#form-div1__inner{
+  width: 320px;
+  overflow: auto;
+  height: 200px;
+}
+#main-div{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#e66465, #9198e5);
+}
+#main-page{
+  border: 2px solid;
+  border-radius: 20px;
+  height: 440px;
+  width: 360px;
+  background-color: white;
+  opacity: 0.9;
+}
+#submit{
+  height: 30px;
+  width: 75px;
+  border-radius: 12px;
+  background: linear-gradient(#e66465, #9198e5);
+  border: none;
+  font-weight: bold;
+  transition: transform 0.5s;
+}
+#submit:hover{
+  transform: scale(1.1)
+}
+.delete-btn{
+  background: linear-gradient(#e66465, #9198e5);
+  border: none;
+  font-weight: bold;
+  transition: transform 0.5s;
+  width: 55px;
+  height: 20px;
+  border-radius: 10px;
+}
+.delete-btn:hover{
+  transform: scale(1.1);
+}
